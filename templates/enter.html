@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Sign Up</title>
+  
+    <style>
+        body {
+    margin: 0;
+    padding: 0;
+    background-image: url('static/backgroundimg.jpg'); /* Added semicolon here */
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: left;
+}
+
+        .container {
+            max-width: 500px;
+            margin: 5px auto;
+        }
+        form {
+            padding: 80px;
+            border: 5px solid #ccc;
+        }
+        input {
+            width: 80%;
+            padding: 8px;
+            border: 5px solid #dfb2b2;
+        }
+        button {
+            width: 80%;
+            padding: 8px;
+            background-color: #dfb2b2;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+          /* Navbar styles */
+          nav {
+            position: absolute;
+            top: 0;
+            right:0;
+            background-color: #333;
+            overflow: hidden;
+            display: flex;
+        }
+
+        nav a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 10px 20px;
+            text-decoration: none;
+        }
+
+        /* Change the color on hover */
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        /* Responsive navigation menu */
+        @media screen and (max-width: 600px) {
+        body {
+            flex-direction: column;
+        }
+
+        nav {
+            position: relative;
+            width: 100%;
+            text-align: center;
+            flex-direction: column; /* Change to column layout on smaller screens */
+        }
+
+        nav a {
+            display: block;
+            width: 100%;
+            padding: 10px;
+        }
+    }
+</style>
+
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about.html">About</a>
+      <a href="/enter.html">Login</a>
+  </nav>
+    
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script>
+      console.clear();
+      const navLinks = document.querySelectorAll('nav a');
+        navLinks.forEach(link => link.addEventListener('click', function(e) {
+            navLinks.forEach(navLink => navLink.classList.remove('active'));
+            e.currentTarget.classList.add('active');
+        }));
+    </script>
+    </style>
+    
+      
+</head>
+<body>
+    <div class="container">
+        <h1>Login</h1>
+        <form action="enter.html" method="post">
+           <br><input type="text" name="USERNAME" placeholder="USERNAME"></br>
+            <br><input type="password" name="password" placeholder="Password"></br>
+            <br><button>
+                <a href="login.html">Login</a>
+            </button></br>
+        </form>
+    </div>
+    
+</body>
